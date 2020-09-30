@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+     <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Hello, world!</h1>
+      <p>Tecnico Electromecanico, Programador y estudiante de Ingenieria Informatica </p>
+    </div>
+  </div>
+  <div class="list-group list-group-flush">
+  <ul>
+
+    {% for reposi in repositorios %}
+    <li class="list-group-item" href="{{ reposi[1] }}">{{reposi[0]}} </li>
+        <!--<a href="{{ reposi[1] }}">{{reposi[0]}}</a>-->
+    {% endfor %}
+     </ul>
+  </div>
+{% endblock  %}
+
+
